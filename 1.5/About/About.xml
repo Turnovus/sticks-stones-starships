@@ -1,0 +1,28 @@
+<ModMetaData>
+    <name>Sticks Stones and Starships</name>
+    <author>Turnovus</author>
+    <modVersion>0.0.0</modVersion>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <packageId>turnovus.rimworld.sticksstonesstarships.st3</packageId>
+
+    <modDependencies>
+        <li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>isorex.communityframework</packageId>
+			<displayName>Community Framework</displayName>
+			<downloadUrl>https://github.com/ISOR3X/communityframework</downloadUrl>
+		</li>
+	</modDependencies>
+
+    <loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>brrainz.harmony</li>
+	</loadAfter>
+</ModMetaData>
