@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>st3_BasicProduction</defName>
+        <label>basic assembly</label>
+        <description>Manufacture simple items from the most basic of materials.</description>
+        <tab>st3_Production</tab>
+        <baseCost>10</baseCost>
+        <techLevel>Animal</techLevel>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->survival</li>
+                <li>subject->toolmaking</li>
+
+                <li>subject_story->lived on a distant rimworld that had lost the secrets of technology</li>
+                <li>subject_story->was cast away on a distant rimworld and had to assemble [ANYPAWN_possessive] own equipment to survive</li>
+                <li>subject_story->wanted to return to a simpler way of life among nature</li>
+
+                <li>subject_gerund->crafting by hand</li>
+                <li>subject_gerund->assembling basic supplies</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>st3_Firestarting</defName>
+        <label>firestarting</label>
+        <description>Learn how to create fire, a vital source of energy for civilization</description>
+        <tab>st3_Production</tab>
+        <baseCost>15</baseCost>
+        <techLevel>Animal</techLevel>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->firestarting</li>
+                <li>subject->fire making</li>
+
+                <li>subject_story->lived on a distant rimworld that had lost the secrets of technology</li>
+                <li>subject_story->was cast away on a distant rimworld and had to assemble [ANYPAWN_possessive] own equipment to survive</li>
+                <li>subject_story->wanted to return to a simpler way of life among nature</li>
+
+                <li>subject_gerund->starting fires</li>
+                <li>subject_gerund->fire drilling</li>
+            </rulesStrings>
+        </generalRules>
+
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>st3_Workbenches</defName>
+        <label>workbenches</label>
+        <description>Create elevated tables to serve as more convenient and efficient workspaces.</description>
+        <tab>st3_Production</tab>
+        <baseCost>15</baseCost>
+        <techLevel>Animal</techLevel>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->survival</li>
+                <li>subject->toolmaking</li>
+
+                <li>subject_story->lived on a distant rimworld that had lost the secrets of technology</li>
+                <li>subject_story->was cast away on a distant rimworld and had to assemble [ANYPAWN_possessive] own equipment to survive</li>
+                <li>subject_story->wanted to return to a simpler way of life among nature</li>
+
+                <li>subject_gerund->crafting by hand</li>
+                <li>subject_gerund->assembling basic supplies</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+
+</Defs>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+    <!--===== Migrate vanilla projects into St3 tabs =====-->
+
+    <!--===== Change research requirements of vanilla buildings =====-->
+
+    <!-- Template
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName=""]/researchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName=""]</xpath>
+            <value><researchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName=""]/researchPrerequisites/li</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName=""]/researchPrerequisites/li</xpath>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName=""]/researchPrerequisites</xpath>
+        <value>
+        </value>
+    </Operation>
+
+    -->
+
+    <!-- Crafting Spot: (none) -> Basic Assembly -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="CraftingSpot"]/researchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="CraftingSpot"]</xpath>
+            <value><researchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="CraftingSpot"]/researchPrerequisites/li</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="CraftingSpot"]/researchPrerequisites/li</xpath>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CraftingSpot"]/researchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicProduction</li>
+        </value>
+    </Operation>
+
+    <!-- Butcher Spot: (none) -> Basic Cooking -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="ButcherSpot"]/researchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="ButcherSpot"]</xpath>
+            <value><researchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="ButcherSpot"]/researchPrerequisites/li</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="ButcherSpot"]/researchPrerequisites/li</xpath>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="ButcherSpot"]/researchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicCooking</li>
+        </value>
+    </Operation>
+
+    <!-- Art Bench: (none) -> Workbenches -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="TableSculpting"]/researchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="TableSculpting"]</xpath>
+            <value><researchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="TableSculpting"]/researchPrerequisites/li</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="TableSculpting"]/researchPrerequisites/li</xpath>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="TableSculpting"]/researchPrerequisites</xpath>
+        <value>
+            <li>st3_Workbenches</li>
+        </value>
+    </Operation>
+
+    <!-- Butcher Table: (none) -> Basic Cooking + Workbenches -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="TableButcher"]/researchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="TableButcher"]</xpath>
+            <value><researchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="TableButcher"]/researchPrerequisites/li</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="TableButcher"]/researchPrerequisites/li</xpath>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="TableButcher"]/researchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicCooking</li>
+            <li>st3_Workbenches</li>
+        </value>
+    </Operation>
+
+
+</Patch>

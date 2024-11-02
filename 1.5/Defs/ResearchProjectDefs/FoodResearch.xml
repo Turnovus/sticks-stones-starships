@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>st3_BasicCooking</defName>
+        <label>basic cooking</label>
+        <description>Process raw food into something more suitable for human consumption.</description>
+        <baseCost>15</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Food</tab>
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->cooking</li>
+                <li>subject->butchering</li>
+
+                <li>subject_story->lived on a distant rimworld that had lost the secrets of technology</li>
+                <li>subject_story->was cast away on a distant rimworld and had to assemble [ANYPAWN_possessive] own equipment to survive</li>
+                <li>subject_story->wanted to return to a simpler way of life among nature</li>
+
+                <li>subject_gerund->cooking food</li>
+                <li>subject_gerund->burning food</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+</Defs>
