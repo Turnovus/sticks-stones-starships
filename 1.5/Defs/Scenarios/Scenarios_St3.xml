@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <ScenarioDef ParentName="Crashlanded">
+        <defName>st3_TechlessCrashlanded</defName>
+        <label>[St3] Crashlanded</label>
+        <scenario>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>st3_TechlessPlayerColony</factionDef>
+            </playerFaction>
+        </scenario>
+    </ScenarioDef>
+
+</Defs>
