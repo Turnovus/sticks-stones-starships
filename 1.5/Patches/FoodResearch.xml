@@ -65,6 +65,14 @@
         </value>
     </Operation>
 
+    - Safely Remove a Specific Prerequisite -
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName=""]/prerequisites/li[text()=""]</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ResearchProjectDef[defName=""]/prerequisites/li[text()=""]</xpath>
+        </match>
+    </Operation>
+
     -->
 
     <!-- Psychoid Brewing: Main -> Food and Drugs
@@ -184,7 +192,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/researchViewY</xpath>
         <value>
-            <researchViewY>1.4</researchViewY>
+            <researchViewY>2.1</researchViewY>
         </value>
     </Operation>
 
@@ -228,7 +236,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/researchViewY</xpath>
         <value>
-            <researchViewY>1.4</researchViewY>
+            <researchViewY>2.1</researchViewY>
         </value>
     </Operation>
 
@@ -258,7 +266,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="WakeUpProduction"]/researchViewY</xpath>
         <value>
-            <researchViewY>2.1</researchViewY>
+            <researchViewY>2.8</researchViewY>
         </value>
     </Operation>
 
@@ -288,7 +296,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/researchViewY</xpath>
         <value>
-            <researchViewY>2.8</researchViewY>
+            <researchViewY>3.5</researchViewY>
         </value>
     </Operation>
 
@@ -318,7 +326,148 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ResearchProjectDef[defName="PenoxycylineProduction"]/researchViewY</xpath>
         <value>
+            <researchViewY>2.1</researchViewY>
+        </value>
+    </Operation>
+
+    <!-- Pemmican: Main -> Food and Drugs
+    Prerequisites: (none) -> Basic Cooking -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Pemmican"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Pemmican"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Pemmican"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Pemmican"]/researchViewX</xpath>
+        <value>
+            <researchViewX>1.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Pemmican"]/researchViewY</xpath>
+        <value>
+            <researchViewY>0.7</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Pemmican"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Pemmican"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="Pemmican"]/prerequisites</xpath>
+        <value>
+            <li>st3_BasicCooking</li>
+        </value>
+    </Operation>
+
+    <!--Nutrient Paste: Main -> Food and Drugs
+    Prerequisites: Electricity -> Electricity + Nutrition -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="NutrientPaste"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="NutrientPaste"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="NutrientPaste"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="NutrientPaste"]/researchViewX</xpath>
+        <value>
+            <researchViewX>3.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="NutrientPaste"]/researchViewY</xpath>
+        <value>
+            <researchViewY>0.7</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="NutrientPaste"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="NutrientPaste"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="NutrientPaste"]/prerequisites</xpath>
+        <value>
+            <li>st3_IntermediateCooking</li>
+        </value>
+    </Operation>
+
+    <!-- Packaged Survival Meals: Main -> Food and Drugs
+    Prerequisites: Nutrient Paste -> Nutrition -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/researchViewX</xpath>
+        <value>
+            <researchViewX>3.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/researchViewY</xpath>
+        <value>
             <researchViewY>1.4</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/prerequisites/li[text()="NutrientPaste"]</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/prerequisites/li[text()="NutrientPaste"]</xpath>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="PackagedSurvivalMeal"]/prerequisites</xpath>
+        <value>
+            <li>st3_IntermediateCooking</li>
         </value>
     </Operation>
 

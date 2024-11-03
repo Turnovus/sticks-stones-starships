@@ -9,6 +9,7 @@
         <baseCost>15</baseCost>
         <techLevel>Animal</techLevel>
         <tab>st3_Food</tab>
+
         <tags>
             <li>TribalStart</li>
             <li>ClassicStart</li>
@@ -28,6 +29,78 @@
 
                 <li>subject_gerund->cooking food</li>
                 <li>subject_gerund->burning food</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>st3_IntermediateCooking</defName>
+        <label>nutrition</label>
+        <description>Understand and apply the principals of nutrition to produce meals that better nourish the body.</description>
+        <baseCost>30</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Food</tab>
+
+        <prerequisites>
+            <li>st3_BasicCooking</li>
+        </prerequisites>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <researchViewX>2.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->nutrition</li>
+                <li>subject->macronutrients</li>
+                <li>subject->recipes</li>
+
+                <li>subject_story->ran a nutritional study with the hopes of improving the lives of the impoverished</li>
+                <li>subject_story->grew sick of choking down burnt meat</li>
+                <li>subject_story->aspired to elevate others to a healthier lifestyle</li>
+
+                <li>subject_gerund->cooking by recipe</li>
+                <li>subject_gerund->portioning food</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>st3_AdvancedCooking</defName>
+        <label>gastronomy</label>
+        <description>Use quality ingredients and flavoring to produce food that nourishes both the body and the soul.</description>
+        <baseCost>60</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Food</tab>
+
+        <prerequisites>
+            <li>st3_IntermediateCooking</li>
+        </prerequisites>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <researchViewX>4.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->cuisine</li>
+                <li>subject->catering</li>
+                <li>subject->recipes</li>
+
+                <li>subject_story->was head chef at a gourmet restaurant</li>
+                <li>subject_story->spent [ANYPAWN_possessive] days devising [ANYPAWN_possessive] own recipes, bringing them to culinary perfection</li>
+                <li>subject_story->spent decades developing a form of nutrient paste that tasted better than its serving tray</li>
+
+                <li>subject_gerund->catering for nobility</li>
+                <li>subject_gerund->seasoning food</li>
             </rulesStrings>
         </generalRules>
     </ResearchProjectDef>
