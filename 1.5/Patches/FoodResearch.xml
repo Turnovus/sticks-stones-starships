@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <!--===== Integrate vanilla projects into our custom tabs =====-->
+    <!-- Template
+    - Set Tab -
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName=""]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName=""]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName=""]/tab</xpath>
+        <value>
+            <tab></tab>
+        </value>
+    </Operation>
+    
+    - Verify project has tree placement (shouldn't be necessary for majority of projects) -
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName=""]/researchViewX</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName=""]</xpath>
+            <value><researchViewX>0.0</researchViewX></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName=""]/researchViewY</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName=""]</xpath>
+            <value><researchViewY>0.0</researchViewY></value>
+        </nomatch>
+    </Operation>
+
+    - Move Project Node -
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName=""]/researchViewX</xpath>
+        <value>
+            <researchViewX></researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName=""]/researchViewY</xpath>
+        <value>
+            <researchViewY></researchViewY>
+        </value>
+    </Operation>
+
+    - Safely Add Prerequisites -
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName=""]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName=""]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName=""]/prerequisites</xpath>
+        <value>
+        </value>
+    </Operation>
+
+    -->
+
+    <!-- Psychoid Brewing: Main -> Food and Drugs
+    Prerequisites: (none) -> Firestarting -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="PsychoidBrewing"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="PsychoidBrewing"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PsychoidBrewing"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PsychoidBrewing"]/researchViewX</xpath>
+        <value>
+            <researchViewX>0.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PsychoidBrewing"]/researchViewY</xpath>
+        <value>
+            <researchViewY>1.40</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="PsychoidBrewing"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="PsychoidBrewing"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="PsychoidBrewing"]/prerequisites</xpath>
+        <value>
+            <li>st3_Firestarting</li>
+        </value>
+    </Operation>
+
+    <!-- Beer Brewing: Main -> Food and Drugs 
+    Prerequisites: (none) -> Workbenches -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Brewing"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Brewing"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Brewing"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Brewing"]/researchViewX</xpath>
+        <value>
+            <researchViewX>0.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Brewing"]/researchViewY</xpath>
+        <value>
+            <researchViewY>2.10</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Brewing"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Brewing"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="Brewing"]/prerequisites</xpath>
+        <value>
+            <li>st3_Workbenches</li>
+        </value>
+    </Operation>
+
+    <!-- Drug Production: Main -> Food and Drugs
+    Prerequisites: (none) -> Workbenches -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/researchViewX</xpath>
+        <value>
+            <researchViewX>2.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/researchViewY</xpath>
+        <value>
+            <researchViewY>1.4</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="DrugProduction"]/prerequisites</xpath>
+        <value>
+            <li>st3_Workbenches</li>
+        </value>
+    </Operation>
+
+
+</Patch>
