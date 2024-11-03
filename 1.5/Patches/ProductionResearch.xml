@@ -135,4 +135,25 @@
         </value>
     </Operation>
 
+    <!-- Research Bench: (none) -> Workbenches -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="SimpleResearchBench"]/researchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="SimpleResearchBench"]</xpath>
+            <value><researchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="SimpleResearchBench"]/researchPrerequisites/li</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="SimpleResearchBench"]/researchPrerequisites/li</xpath>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="SimpleResearchBench"]/researchPrerequisites</xpath>
+        <value>
+            <li>st3_Workbenches</li>
+        </value>
+    </Operation>
+
 </Patch>
