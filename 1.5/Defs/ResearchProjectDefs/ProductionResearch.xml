@@ -10,6 +10,9 @@
         <baseCost>10</baseCost>
         <techLevel>Animal</techLevel>
 
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
+
         <tags>
             <li>TribalStart</li>
             <li>ClassicStart</li>
@@ -37,6 +40,9 @@
         <tab>st3_Production</tab>
         <baseCost>15</baseCost>
         <techLevel>Animal</techLevel>
+
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>0.7</researchViewY>
 
         <tags>
             <li>TribalStart</li>
@@ -66,6 +72,9 @@
         <tab>st3_Production</tab>
         <baseCost>15</baseCost>
         <techLevel>Animal</techLevel>
+
+        <researchViewX>2.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
 
         <prerequisites>
             <li>st3_BasicProduction</li>
@@ -98,6 +107,9 @@
         <tab>st3_Production</tab>
         <baseCost>100</baseCost>
         <techLevel>Neolithic</techLevel>
+
+        <researchViewX>4.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
 
         <prerequisites>
             <li>st3_Workbenches</li>

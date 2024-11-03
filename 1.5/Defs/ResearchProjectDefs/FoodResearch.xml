@@ -14,6 +14,9 @@
             <li>ClassicStart</li>
         </tags>
 
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
+
         <generalRules>
             <rulesStrings>
                 <li>subject->cooking</li>
