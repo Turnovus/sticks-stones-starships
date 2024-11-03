@@ -67,6 +67,10 @@
         <baseCost>15</baseCost>
         <techLevel>Animal</techLevel>
 
+        <prerequisites>
+            <li>st3_BasicProduction</li>
+        </prerequisites>
+
         <tags>
             <li>TribalStart</li>
             <li>ClassicStart</li>
@@ -80,6 +84,37 @@
                 <li>subject_story->lived on a distant rimworld that had lost the secrets of technology</li>
                 <li>subject_story->was cast away on a distant rimworld and had to assemble [ANYPAWN_possessive] own equipment to survive</li>
                 <li>subject_story->wanted to return to a simpler way of life among nature</li>
+
+                <li>subject_gerund->crafting by hand</li>
+                <li>subject_gerund->assembling basic supplies</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>st3_MetalShaping</defName>
+        <label>metal shaping</label>
+        <description>Assemble scraps of metal into purpose-made production facilities.</description>
+        <tab>st3_Production</tab>
+        <baseCost>100</baseCost>
+        <techLevel>Neolithic</techLevel>
+
+        <prerequisites>
+            <li>st3_Workbenches</li>
+        </prerequisites>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->survival</li>
+                <li>subject->toolmaking</li>
+
+                <li>subject_story->lived on a distant rimworld that had lost the secrets of technology</li>
+                <li>subject_story->was cast away on a distant rimworld and had to assemble [ANYPAWN_possessive] own equipment to survive</li>
 
                 <li>subject_gerund->crafting by hand</li>
                 <li>subject_gerund->assembling basic supplies</li>

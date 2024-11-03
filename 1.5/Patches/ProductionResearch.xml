@@ -113,5 +113,26 @@
         </value>
     </Operation>
 
+    <!-- Fueled Stove: (none) -> Firestarting + Metal Shaping -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="FueledStove"]/researchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="FueledStove"]</xpath>
+            <value><researchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="FueledStove"]/researchPrerequisites/li</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="FueledStove"]/researchPrerequisites/li</xpath>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="FueledStove"]/researchPrerequisites</xpath>
+        <value>
+            <li>st3_Firestarting</li>
+            <li>st3_MetalShaping</li>
+        </value>
+    </Operation>
 
 </Patch>
