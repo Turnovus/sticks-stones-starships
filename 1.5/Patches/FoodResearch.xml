@@ -471,4 +471,125 @@
         </value>
     </Operation>
 
+    <!--===== Add or substitute St3 research projects as prerequisites for vanilla recipes =====-->
+    <!-- Template
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[defName=""]/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName=""]</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName=""]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite></researchPrerequisite>
+        </value>
+    </Operation>
+    -->
+
+    <!-- Make Kibble: (none) -> Basic Cooking -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[defName="Make_Kibble"]/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="Make_Kibble"]</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="Make_Kibble"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_BasicCooking</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <!-- Cook Simple Meal: (none) -> Basic Cooking -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[defName="CookMealSimple"]/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookMealSimple"]</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="CookMealSimple"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_BasicCooking</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[defName="CookMealSimpleBulk"]/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CookMealSimpleBulk"]</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="CookMealSimpleBulk"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_BasicCooking</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <!-- Cook Fine Meal: (none) -> Nutrition -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[@Name="CookMealFineBase"]/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[@Name="CookMealFineBase"]</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[@Name="CookMealFineBase"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_IntermediateCooking</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[@Name="CookMealFineBulkBase"]/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[@Name="CookMealFineBulkBase"]</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[@Name="CookMealFineBulkBase"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_IntermediateCooking</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <!-- Cook Lavish Meal: (none) -> Gastronomy -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[@Name="CookMealLavishBase"]/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[@Name="CookMealLavishBase"]</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[@Name="CookMealLavishBase"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_AdvancedCooking</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/RecipeDef[@Name="CookMealLavishBulkBase"]/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[@Name="CookMealLavishBulkBase"]</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[@Name="CookMealLavishBulkBase"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_AdvancedCooking</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <!-- TODO: Baby food (pending Biotech support) -->
+
 </Patch>

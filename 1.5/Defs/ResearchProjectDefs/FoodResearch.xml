@@ -10,6 +10,10 @@
         <techLevel>Animal</techLevel>
         <tab>st3_Food</tab>
 
+        <prerequisites>
+            <li>st3_Firestarting</li>
+        </prerequisites>
+
         <tags>
             <li>TribalStart</li>
             <li>ClassicStart</li>
