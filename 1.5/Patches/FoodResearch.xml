@@ -202,5 +202,124 @@
         </value>
     </Operation>
 
+    <!-- Psychite Refining: Main -> Food and Drugs -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/researchViewX</xpath>
+        <value>
+            <researchViewX>3.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PsychiteRefining"]/researchViewY</xpath>
+        <value>
+            <researchViewY>1.4</researchViewY>
+        </value>
+    </Operation>
+
+    <!-- Wakeup Production: Main -> Food and Drugs -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="WakeUpProduction"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="WakeUpProduction"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="WakeUpProduction"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="WakeUpProduction"]/researchViewX</xpath>
+        <value>
+            <researchViewX>3.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="WakeUpProduction"]/researchViewY</xpath>
+        <value>
+            <researchViewY>2.1</researchViewY>
+        </value>
+    </Operation>
+
+    <!-- Go-Juice Production: Main -> Food and Drugs -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/researchViewX</xpath>
+        <value>
+            <researchViewX>3.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="GoJuiceProduction"]/researchViewY</xpath>
+        <value>
+            <researchViewY>2.8</researchViewY>
+        </value>
+    </Operation>
+
+    <!-- Penoxycyline Production: Main -> Food and Drugs -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="PenoxycylineProduction"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="PenoxycylineProduction"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PenoxycylineProduction"]/tab</xpath>
+        <value>
+            <tab>st3_Food</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PenoxycylineProduction"]/researchViewX</xpath>
+        <value>
+            <researchViewX>4.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="PenoxycylineProduction"]/researchViewY</xpath>
+        <value>
+            <researchViewY>1.4</researchViewY>
+        </value>
+    </Operation>
 
 </Patch>
