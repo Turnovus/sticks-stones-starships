@@ -15,7 +15,14 @@
         <generalDescription>Processing of raw ingredients into products fit for human consumption, be they meals or chemicals</generalDescription>
     </ResearchTabDef>
 
-    <!-- Supersede the vanilla main tab so that it appears at the bottom. It will be used as a catch-all for unsupported mods. -->
+    <ResearchTabDef>
+        <defName>st3_Construction</defName>
+        <label>Construction</label>
+        <generalTitle>Building construction</generalTitle>
+        <generalDescription>Assembly of raw materials into all sorts of structures, including buildings and furniture.</generalDescription>
+    </ResearchTabDef>
+
+    <!-- Supersede the vanilla main tab so that it appears at the end. It will be used as a catch-all for unsupported mods. -->
     <ResearchTabDef>
         <defName>Main</defName>
         <label>Miscellaneous</label>

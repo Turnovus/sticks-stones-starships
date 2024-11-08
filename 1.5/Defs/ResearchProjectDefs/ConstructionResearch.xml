@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <ResearchProjectDef>
+        <defName>st3_Sculpting</defName>
+        <label>art</label>
+        <description>Shaping raw materials into pleasing forms.</description>
+        <baseCost>30</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Construction</tab>
+
+        <prerequisites>
+            <li>st3_BasicProduction</li>
+        </prerequisites>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
+
+        <generalRules>
+            <rulesStrings>
+                <li>subject->pottery</li>
+                <li>subject->art</li>
+                <li>subject->sculpting</li>
+
+                <!-- TODO -->
+                <li>subject_story->lived on a distant rimworld that had lost the secrets of technology</li>
+                <li>subject_story->was cast away on a distant rimworld and had to assemble [ANYPAWN_possessive] own equipment to survive</li>
+                <li>subject_story->wanted to return to a simpler way of life among nature</li>
+
+                <li>subject_gerund->sculpting</li>
+                <li>subject_gerund->painting</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+</Defs>

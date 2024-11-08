@@ -70,7 +70,7 @@
         </value>
     </Operation>
 
-    <!-- Art Bench: (none) -> Workbenches -->
+    <!-- Art Bench: (none) -> Workbenches + Art -->
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="TableSculpting"]/researchPrerequisites</xpath>
         <nomatch Class="PatchOperationAdd">
@@ -88,6 +88,7 @@
         <xpath>Defs/ThingDef[defName="TableSculpting"]/researchPrerequisites</xpath>
         <value>
             <li>st3_Workbenches</li>
+            <li>st3_Sculpting</li>
         </value>
     </Operation>
 

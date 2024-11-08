@@ -6,6 +6,7 @@
         <value>
             <st3_Production />
             <st3_Food />
+            <st3_Construction />
         </value>
     </Operation>
 </Patch>
