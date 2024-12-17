@@ -9,6 +9,13 @@
     </ResearchTabDef>
 
     <ResearchTabDef>
+        <defName>st3_Agriculture</defName>
+        <label>Agriculture</label>
+        <generalTitle>Agriculture</generalTitle>
+        <generalDescription>Working the land and tending crops to yield sustenence and raw materials.</generalDescription>
+    </ResearchTabDef>
+
+    <ResearchTabDef>
         <defName>st3_Food</defName>
         <label>Food and Drugs</label>
         <generalTitle>Food and drugs</generalTitle>

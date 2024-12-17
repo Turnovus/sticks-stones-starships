@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <ResearchProjectDef Name="st3_AgricultureResearch" Abstract="True">
+        <generalRules>
+            <rulesStrings>
+                <li>subject->agriculture</li>
+                <li>subject->horticulture</li>
+                <li>subject->farming</li>
+                <li>subject->botany</li>
+
+                <!-- TODO -->
+                <li>subject_story->lived on a distant rimworld that had lost the secrets of technology</li>
+                <li>subject_story->was cast away on a distant rimworld and had to assemble [ANYPAWN_possessive] own equipment to survive</li>
+                <li>subject_story->wanted to return to a simpler way of life among nature</li>
+
+                <li>subject_gerund->planting</li>
+                <li>subject_gerund->sowing</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="st3_AgricultureResearch">
+        <defName>st3_BasicFoodCrops</defName>
+        <label>subsistence farming</label>
+        <description>Sow basic food crops.</description>
+        <baseCost>15</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Agriculture</tab>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="st3_AgricultureResearch">
+        <defName>st3_AdvancedFoodCrops</defName>
+        <label>advanced crops</label>
+        <description>Sow more specialized food crops.</description>
+        <baseCost>35</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Agriculture</tab>
+
+        <prerequisites>
+            <li>st3_BasicFoodCrops</li>
+        </prerequisites>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <researchViewX>1.0</researchViewX>
+        <researchViewY>0.0</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="st3_AgricultureResearch">
+        <defName>st3_BasicResourceCrops</defName>
+        <label>plant-based resources</label>
+        <description>Collect useful raw materials from plants.</description>
+        <baseCost>15</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Agriculture</tab>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>0.7</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="st3_AgricultureResearch">
+        <defName>st3_HerbalMedicine</defName>
+        <label>natural remedies</label>
+        <description>Collect herbs and other organic compounds with medicinal applications.</description>
+        <baseCost>50</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Agriculture</tab>
+
+        <prerequisites>
+            <li>st3_BasicResourceCrops</li>
+        </prerequisites>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <researchViewX>1.0</researchViewX>
+        <researchViewY>0.7</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="st3_AgricultureResearch">
+        <defName>st3_Flowers</defName>
+        <label>flowers</label>
+        <description>Sow beautiful flowers.</description>
+        <baseCost>5</baseCost>
+        <techLevel>Animal</techLevel>
+        <tab>st3_Agriculture</tab>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>1.4</researchViewY>
+    </ResearchProjectDef>
+
+</Defs>
+
