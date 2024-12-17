@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <!-- Tree Sowing: Main -> Agriculture -->
+    <!-- Prerequisites: (none) -> Plant-Based Resources -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="TreeSowing"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="TreeSowing"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="TreeSowing"]/tab</xpath>
+        <value>
+            <tab>st3_Agriculture</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="TreeSowing"]/researchViewX</xpath>
+        <value>
+            <researchViewX>2.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="TreeSowing"]/researchViewY</xpath>
+        <value>
+            <researchViewY>0.7</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="TreeSowing"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="TreeSowing"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="TreeSowing"]/prerequisites</xpath>
+        <value>
+            <li>st3_BasicResourceCrops</li>
+        </value>
+    </Operation>
+
+    <!-- Cocoa: Main -> Agriculture -->
+    <!-- Prerequisites: Tree Sowing -> Tree Sowing + Advanced Crops -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Cocoa"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Cocoa"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Cocoa"]/tab</xpath>
+        <value>
+            <tab>st3_Agriculture</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Cocoa"]/researchViewX</xpath>
+        <value>
+            <researchViewX>3.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Cocoa"]/researchViewY</xpath>
+        <value>
+            <researchViewY>0.0</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Cocoa"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Cocoa"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="Cocoa"]/prerequisites</xpath>
+        <value>
+            <li>st3_AdvancedFoodCrops</li>
+        </value>
+    </Operation>
+
+    <!-- Devilstrand: Main -> Agriculture -->
+    <!-- Prerequisites: (none) -> Plant-Based Resources -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]/tab</xpath>
+        <value>
+            <tab>st3_Agriculture</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]/researchViewX</xpath>
+        <value>
+            <researchViewX>2.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]/researchViewY</xpath>
+        <value>
+            <researchViewY>1.4</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="Devilstrand"]/prerequisites</xpath>
+        <value>
+            <li>st3_BasicResourceCrops</li>
+        </value>
+    </Operation>
+
+</Patch>

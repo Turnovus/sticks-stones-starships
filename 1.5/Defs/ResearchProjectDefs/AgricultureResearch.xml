@@ -94,7 +94,7 @@
         </tags>
 
         <researchViewX>1.0</researchViewX>
-        <researchViewY>0.7</researchViewY>
+        <researchViewY>1.4</researchViewY>
     </ResearchProjectDef>
 
     <ResearchProjectDef ParentName="st3_AgricultureResearch">
