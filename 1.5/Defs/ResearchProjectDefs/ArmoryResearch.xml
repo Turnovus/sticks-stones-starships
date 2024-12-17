@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>st3_BasicWeapons</defName>
+        <label>crude armaments</label>
+        <description>Fashion the most basic of weapons out of simple resources.</description>
+        <tab>st3_Armory</tab>
+        <baseCost>15</baseCost>
+        <techLevel>Animal</techLevel>
+
+        <researchViewX>0.0</researchViewX>
+        <researchViewY>0.35</researchViewY>
+
+        <prerequisites>
+            <li>st3_BasicProduction</li>
+        </prerequisites>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <!-- TODO: Book strings -->
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>st3_RangedWeapons</defName>
+        <label>ranged weapons</label>
+        <description>Fashion the most basic of weapons out of simple resources.</description>
+        <tab>st3_Armory</tab>
+        <baseCost>20</baseCost>
+        <techLevel>Animal</techLevel>
+
+        <researchViewX>1.0</researchViewX>
+        <researchViewY>0.7</researchViewY>
+
+        <prerequisites>
+            <li>st3_BasicWeapons</li>
+        </prerequisites>
+
+        <tags>
+            <li>TribalStart</li>
+            <li>ClassicStart</li>
+        </tags>
+
+        <!-- TODO: Book strings -->
+    </ResearchProjectDef>
+
+</Defs>

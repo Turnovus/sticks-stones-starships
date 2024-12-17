@@ -5,9 +5,10 @@
         <xpath>Defs/ThingDef[defName="Schematic"]/comps/li[@Class="CompProperties_Book"]/doers/li[@Class="BookOutcomeProperties_GainResearch"]/tabs</xpath>
         <value>
             <st3_Production />
-            <st3_Agriculture/>
+            <st3_Agriculture />
             <st3_Food />
             <st3_Construction />
+            <st3_Armory />
         </value>
     </Operation>
 </Patch>

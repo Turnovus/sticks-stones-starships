@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <!-- Recurve Bow: Main -> Armory -->
+    <!-- Prerequisites: (none) -> Ranged Weapons -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="RecurveBow"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="RecurveBow"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="RecurveBow"]/tab</xpath>
+        <value>
+            <tab>st3_Armory</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="RecurveBow"]/researchViewX</xpath>
+        <value>
+            <researchViewX>2.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="RecurveBow"]/researchViewY</xpath>
+        <value>
+            <researchViewY>0.7</researchViewY>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="RecurveBow"]/prerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="RecurveBow"]</xpath>
+            <value><prerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ResearchProjectDef[defName="RecurveBow"]/prerequisites</xpath>
+        <value>
+            <li>st3_RangedWeapons</li>
+        </value>
+    </Operation>
+
+    <!-- Greatbow: Main -> Armory -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName="Greatbow"]/tab</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="Greatbow"]</xpath>
+            <value>
+                <tab>Main</tab>
+            </value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Greatbow"]/tab</xpath>
+        <value>
+            <tab>st3_Armory</tab>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Greatbow"]/researchViewX</xpath>
+        <value>
+            <researchViewX>3.0</researchViewX>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="Greatbow"]/researchViewY</xpath>
+        <value>
+            <researchViewY>0.7</researchViewY>
+        </value>
+    </Operation>
+
+</Patch>

@@ -29,6 +29,13 @@
         <generalDescription>Assembly of raw materials into all sorts of structures, including buildings and furniture.</generalDescription>
     </ResearchTabDef>
 
+    <ResearchTabDef>
+        <defName>st3_Armory</defName>
+        <label>armory</label>
+        <generalTitle>Weapons and armor</generalTitle>
+        <generalDescription>Manufacture of weapons and armor for self defense, or for hostile conquest.</generalDescription>
+    </ResearchTabDef>
+
     <!-- Supersede the vanilla main tab so that it appears at the end. It will be used as a catch-all for unsupported mods. -->
     <ResearchTabDef>
         <defName>Main</defName>
