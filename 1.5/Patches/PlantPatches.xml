@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+    <!--========== Basic Food Crops ==========-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Rice"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Rice"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Rice"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicFoodCrops</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Potato"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Potato"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Potato"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicFoodCrops</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Haygrass"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Haygrass"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Haygrass"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicFoodCrops</li>
+        </value>
+    </Operation>
+
+    <!--========== Advanced Food Crops ===========-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Corn"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Corn"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Corn"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_AdvancedFoodCrops</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Strawberry"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Strawberry"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Strawberry"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_AdvancedFoodCrops</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Agave"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Agave"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Agave"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_AdvancedFoodCrops</li>
+        </value>
+    </Operation>
+
+    <!--========== Production Crops ==========-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Cotton"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Cotton"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Cotton"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicResourceCrops</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Hops"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Hops"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Hops"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicResourceCrops</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Tinctoria"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Tinctoria"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Tinctoria"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_BasicResourceCrops</li>
+        </value>
+    </Operation>
+
+    <!--========== Medicinal Crops ==========-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Healroot"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Healroot"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Healroot"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_HerbalMedicine</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Smokeleaf"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Smokeleaf"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Smokeleaf"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_HerbalMedicine</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Psychoid"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Psychoid"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Psychoid"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_HerbalMedicine</li>
+        </value>
+    </Operation>
+
+    <!--========== Flowers ==========-->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Rose"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Rose"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Rose"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_Flowers</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Plant_Daylily"]/plant/sowResearchPrerequisites</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Plant_Daylily"]/plant</xpath>
+            <value><sowResearchPrerequisites/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Plant_Daylily"]/plant/sowResearchPrerequisites</xpath>
+        <value>
+            <li>st3_Flowers</li>
+        </value>
+    </Operation>
+
+</Patch>
