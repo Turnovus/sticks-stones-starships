@@ -2,6 +2,7 @@
 
 <Patch>
 
+    <!--==================== Research Projects ====================-->
     <!-- Recurve Bow: Main -> Armory -->
     <!-- Prerequisites: (none) -> Ranged Weapons -->
     <Operation Class="PatchOperationConditional">
@@ -74,6 +75,68 @@
         <xpath>Defs/ResearchProjectDef[defName="Greatbow"]/researchViewY</xpath>
         <value>
             <researchViewY>0.7</researchViewY>
+        </value>
+    </Operation>
+
+    <!--==================== Crafting Recipes ====================-->
+    <!-- Template
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName=""]/recipeMaker/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName=""]/recipeMaker</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName=""]/recipeMaker/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite></researchPrerequisite>
+        </value>
+    </Operation>
+    -->
+
+    <!-- Club: (none) -> Crude Armaments -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Club"]/recipeMaker/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="MeleeWeapon_Club"]/recipeMaker</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Club"]/recipeMaker/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_BasicWeapons</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <!-- Knife: (none) -> Crude Armaments -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/recipeMaker/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/recipeMaker</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/recipeMaker/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_BasicWeapons</researchPrerequisite>
+        </value>
+    </Operation>
+
+    <!-- Short Bow: (none) -> Ranged Weapons -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Bow_Short"]/recipeMaker/researchPrerequisite</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Bow_Short"]/recipeMaker</xpath>
+            <value><researchPrerequisite/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Bow_Short"]/recipeMaker/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>st3_RangedWeapons</researchPrerequisite>
         </value>
     </Operation>
 
